@@ -2,14 +2,21 @@
   "name": "new-portfolio",
   "version": "1.0.50",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "dev:client": "bunx --bun vite dev",
+    "build": "bunx --bun vite build",
+    "preview": "bun run build && bun run dev"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@elysiajs/static": "latest",
+    "elysia": "latest",
+    "htmx.org": "^2.0.8",
+    "svelte": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@sveltejs/vite-plugin-svelte": "latest",
+    "bun-types": "latest",
+    "vite": "latest"
   },
   "module": "src/index.js"
 }

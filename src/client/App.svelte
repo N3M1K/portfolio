@@ -1,0 +1,192 @@
+<script>
+  import Loader from "./Loader.svelte";
+  import Cursor from "./Cursor.svelte";
+  import Nav from "./Nav.svelte";
+  import Hero from "./Hero.svelte";
+  import About from "./About.svelte";
+  import Projects from "./Projects.svelte";
+  import Skills from "./Skills.svelte";
+  import Timeline from "./Timeline.svelte";
+  import Contact from "./Contact.svelte";
+  import Footer from "./Footer.svelte";
+</script>
+
+<Loader />
+<Cursor />
+<Nav />
+<Hero />
+<About />
+<Projects />
+<Skills />
+<Timeline />
+<Contact />
+<Footer />
+
+<style>
+  :global(:root) {
+    --bg: #12141a;
+    --bg1: #1c1f26;
+    --bg2: #2a2e38;
+    --bg3: #3e4552;
+    --fg4: #777777;
+    --fg: #a4a8ae;
+    --fg2: #cccccc;
+    --fg3: #d9dcdf;
+    --red: #c95a5a;
+    --orange: #e37349;
+    --yellow: #e6ae5c;
+    --green: #8ba563;
+    --cyan: #507b9e;
+    --blue: #5a86a8;
+    --purple: #8a719c;
+    --brown: #a3624c;
+    --display: "Major Mono Display", monospace;
+    --mono: "Share Tech Mono", monospace;
+    --code: "JetBrains Mono", monospace;
+  }
+
+  :global(*),
+  :global(*::before),
+  :global(*::after) {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
+  }
+
+  :global(body) {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* Scanline overlay */
+  :global(body::before) {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.035) 2px,
+      rgba(0, 0, 0, 0.035) 4px
+    );
+    pointer-events: none;
+    z-index: 9990;
+  }
+
+  /* Grid overlay */
+  :global(body::after) {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(90, 134, 168, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(90, 134, 168, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  :global(section) {
+    position: relative;
+    z-index: 1;
+  }
+
+  :global(.container) {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  /* Shared section header */
+  :global(.section-header) {
+    margin-bottom: 48px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--bg2);
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+  :global(.section-num) {
+    font-family: var(--display);
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 2px;
+  }
+  :global(.section-title) {
+    font-family: var(--display);
+    font-size: clamp(22px, 3vw, 32px);
+    color: var(--fg3);
+    letter-spacing: 3px;
+  }
+  :global(.section-line) {
+    flex: 1;
+    height: 1px;
+    background: var(--bg2);
+  }
+
+  /* Shared button */
+  :global(.btn) {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    border: 1px solid;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: none;
+  }
+  :global(.btn-g) {
+    color: var(--green);
+    border-color: rgba(139, 165, 99, 0.45);
+  }
+  :global(.btn-g:hover) {
+    background: rgba(139, 165, 99, 0.1);
+    box-shadow: 0 0 20px rgba(139, 165, 99, 0.2);
+  }
+  :global(.btn-ghost) {
+    color: var(--fg4);
+    border-color: var(--bg3);
+  }
+  :global(.btn-ghost:hover) {
+    color: var(--fg2);
+    border-color: var(--fg4);
+  }
+
+  /* Scroll reveal */
+  :global(.reveal) {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  :global(.reveal.visible) {
+    opacity: 1;
+    transform: none;
+  }
+  :global(.d1) { transition-delay: 0.1s; }
+  :global(.d2) { transition-delay: 0.2s; }
+  :global(.d3) { transition-delay: 0.3s; }
+  :global(.d4) { transition-delay: 0.4s; }
+
+  /* Scrollbar */
+  :global(::-webkit-scrollbar) { width: 4px; }
+  :global(::-webkit-scrollbar-track) { background: var(--bg); }
+  :global(::-webkit-scrollbar-thumb) { background: var(--bg3); }
+
+  @media (max-width: 900px) {
+    :global(.container) { padding: 0 20px; }
+  }
+</style>
