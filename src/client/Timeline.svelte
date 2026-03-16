@@ -27,7 +27,7 @@
       delay: "d3",
     },
     {
-      date: "2015 — NOW",
+      date: "2023 — NOW",
       title: "Smaragd Summer Camp — Vedoucí",
       desc: "10+ years as a camper, now leading groups. The best school I've had for people, chaos, and responsibility.",
       delay: "d4",

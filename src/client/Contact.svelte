@@ -34,9 +34,9 @@
             <span class="ll">Camp</span><span class="lv">smaragd.us</span
             ><span class="la">→</span>
           </a>
-          <a class="contact-link" href="mailto:hello@xxdev.cz">
+          <a class="contact-link" href="mailto:lukas.nemecek@xxdev.cz">
             <span class="ll">Email</span><span class="lv"
-              >hello@xxdev.cz</span
+              >lukas.nemecek@xxdev.cz</span
             ><span class="la">→</span>
           </a>
         </div>
@@ -52,7 +52,7 @@
           Graduating May 2026, FI MUNI in September. Available for interesting
           freelance work now — and open to collaborations during university.
         </p>
-        <a href="mailto:hello@xxdev.cz" class="btn btn-g">→ send a message</a>
+        <a href="mailto:lukas.nemecek@xxdev.cz" class="btn btn-g">→ send a message</a>
       </div>
     </div>
   </div>

@@ -27,7 +27,7 @@
         </p>
         <p>
           Outside of code: I've been a
-          <span class="em3">camp leader at Smaragd</span> for 10 years — which
+          <span class="em3">camp leader at Smaragd</span> for 3 years — which
           taught me more about managing chaos and people than any course.
           Currently deep in <span class="em2">NixOS</span> after Arch, Fedora,
           Mint and Kali. The declarative OS rabbit hole has me.
@@ -40,7 +40,7 @@
           <div class="stat-label">Production Projects</div>
         </div>
         <div class="stat-box" style="--acc:var(--blue)">
-          <div class="stat-num">10y</div>
+          <div class="stat-num">3y</div>
           <div class="stat-label">Camp Leadership</div>
         </div>
         <div class="stat-box" style="--acc:var(--yellow)">

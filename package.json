@@ -16,7 +16,13 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "latest",
     "bun-types": "latest",
-    "vite": "latest"
+    "vite": "latest",
+    "@types/bun": "latest"
   },
-  "module": "src/index.js"
+  "module": "src/index.js",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
 }
