@@ -303,7 +303,8 @@
     font-family: var(--code);
     font-size: 12.5px;
     line-height: 1.85;
-    min-height: 340px;
+    height: 340px;
+    overflow-y: auto;
     position: relative;
   }
   .loader-body::before {

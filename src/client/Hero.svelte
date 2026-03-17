@@ -127,18 +127,56 @@
     animation: gb 7s infinite 0.4s;
   }
   @keyframes gr {
-    0%, 87%, 100% { opacity: 0; transform: none; }
-    88% { opacity: 0.7; clip-path: inset(15% 0 65% 0); transform: translateX(-4px); }
-    90% { opacity: 0.7; clip-path: inset(60% 0 8% 0); transform: translateX(3px); }
-    92% { opacity: 0.7; clip-path: inset(3% 0 85% 0); transform: translateX(-2px); }
-    94% { opacity: 0; }
+    0%,
+    87%,
+    100% {
+      opacity: 0;
+      transform: none;
+    }
+    88% {
+      opacity: 0.7;
+      clip-path: inset(15% 0 65% 0);
+      transform: translateX(-4px);
+    }
+    90% {
+      opacity: 0.7;
+      clip-path: inset(60% 0 8% 0);
+      transform: translateX(3px);
+    }
+    92% {
+      opacity: 0.7;
+      clip-path: inset(3% 0 85% 0);
+      transform: translateX(-2px);
+    }
+    94% {
+      opacity: 0;
+    }
   }
   @keyframes gb {
-    0%, 89%, 100% { opacity: 0; transform: none; }
-    90% { opacity: 0.6; clip-path: inset(72% 0 3% 0); transform: translateX(4px); }
-    92% { opacity: 0.6; clip-path: inset(25% 0 50% 0); transform: translateX(-2px); }
-    94% { opacity: 0.6; clip-path: inset(8% 0 75% 0); transform: translateX(3px); }
-    96% { opacity: 0; }
+    0%,
+    89%,
+    100% {
+      opacity: 0;
+      transform: none;
+    }
+    90% {
+      opacity: 0.6;
+      clip-path: inset(72% 0 3% 0);
+      transform: translateX(4px);
+    }
+    92% {
+      opacity: 0.6;
+      clip-path: inset(25% 0 50% 0);
+      transform: translateX(-2px);
+    }
+    94% {
+      opacity: 0.6;
+      clip-path: inset(8% 0 75% 0);
+      transform: translateX(3px);
+    }
+    96% {
+      opacity: 0;
+    }
   }
   .hero-handle {
     font-family: var(--display);
@@ -229,7 +267,9 @@
     margin-left: 2px;
   }
   @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+      opacity: 0;
+    }
   }
 
   @media (max-width: 900px) {
