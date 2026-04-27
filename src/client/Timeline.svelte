@@ -5,7 +5,7 @@
     {
       date: "SEP 2026",
       title: "FI MUNI — Programování a vývoj aplikací",
-      desc: 'Incoming at <span class="em">Faculty of Informatics, Masaryk University</span>. Moving to Brno. No TSP required — IQ test exemption.',
+      desc: 'Incoming at <span class="em">Faculty of Informatics, Masaryk University</span>. Moving to Brno.',
       delay: "",
     },
     {

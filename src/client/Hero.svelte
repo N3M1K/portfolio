@@ -53,10 +53,6 @@
       <div style="color:var(--blue);padding-left:36px">
         "os": <span style="color:var(--yellow)">"NixOS"</span>,
       </div>
-      <div style="color:var(--blue);padding-left:36px">
-        "iq": <span style="color:var(--green)">140</span>
-        <span style="color:var(--fg4);font-style:italic">// had to flex</span>
-      </div>
       <div class="to">{"}"}</div>
       <div style="display:flex;gap:10px;margin-top:8px">
         <span class="tp">❯</span><span class="tc"
