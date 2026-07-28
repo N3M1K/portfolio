@@ -18,7 +18,7 @@
     {
       id: "PROJ://001",
       name: "DEADROP",
-      desc: "Anonymous intelligence exchange platform. Drop datasets and documents, analyze leaks in real time. Zero-log policy, auto-assigned handles, WebSocket live broadcast.",
+      desc: "Anonymous data exchange platform. Upload documents, analyze content in real time. Privacy-first architecture, auto-assigned handles, WebSocket live broadcast.",
       href: "#",
       color: "var(--red)",
       badges: [{ label: "WIP", cls: "bw" }],
@@ -29,18 +29,18 @@
         { num: 100, label: "Best", cls: "lg" },
         { num: 100, label: "SEO", cls: "lg" },
       ],
-      metrics: "WS broadcast · Rate limiting · SHA-256 IP · Zero-log",
+      metrics: "WS broadcast · Rate limiting · SHA-256 hashing · Privacy-first",
     },
     {
       id: "PROJ://002",
       name: "PNEUBAZAR\nZLÍN",
-      desc: "Full e-commerce for a tyre reseller in Zlín. Parametric filtering by dimensions, season and price. PHP/MySQL backend, custom admin panel. Live in production.",
-      href: "https://pneubazarzlin.cz",
+      desc: "Full e-commerce platform for a tyre reseller in Zlín. Parametric filtering by dimensions, season and price. PHP/MySQL backend with custom admin panel. Delivered and deployed to production.",
+      href: "#",
       color: "var(--green)",
       badges: [
-        { label: "Live", cls: "bl" },
+        { label: "Completed", cls: "bl" },
         { label: "Client", cls: "bc" },
-        { label: "Ročníková", cls: "bs" },
+        { label: "Thesis Project", cls: "bs" },
       ],
       stack: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
       lighthouse: [
@@ -49,12 +49,11 @@
         { num: 100, label: "Best", cls: "lg" },
         { num: 91, label: "SEO", cls: "lg" },
       ],
-      target: "_blank",
     },
     {
       id: "PROJ://003",
       name: "SMARAGD\n.US",
-      desc: "Website for Smaragd summer camp — an organisation I've been part of for 10+ years. Built and maintained by me. Where I grew up and now lead.",
+      desc: "Website for Smaragd summer camp — an organisation I've been part of for 10+ years. Built and maintained by me. Now serving as a group leader.",
       href: "https://smaragd.us",
       color: "var(--yellow)",
       badges: [{ label: "Live", cls: "bl" }],
@@ -65,18 +64,17 @@
         { num: 100, label: "Best", cls: "lg" },
         { num: 92, label: "SEO", cls: "lg" },
       ],
-      metrics: "10+ years with the camp · Now leading as vedoucí",
       target: "_blank",
     },
     {
       id: "PROJ://004",
       name: "YOKOHAMA\nTWS",
-      desc: "Corporate website for Yokohama TWS (formerly Mitas Zlín), major industrial tyre manufacturer. Built with aggressive caching strategy for maximum load performance.",
+      desc: "Corporate website for Yokohama TWS (formerly Mitas Zlín), a major industrial tyre manufacturer. Performance-first architecture with aggressive caching strategy.",
       href: "https://mitas-odbory.onrender.com",
       color: "var(--blue)",
       badges: [
         { label: "WIP", cls: "bw" },
-        { label: "Client", cls: "bc" },
+        { label: "Volunteer", cls: "bs" },
       ],
       stack: ["HTML/CSS", "JavaScript", "Cache API"],
       lighthouse: [
@@ -85,12 +83,27 @@
         { num: 100, label: "Best", cls: "lg" },
         { num: 91, label: "SEO", cls: "lg" },
       ],
-      metrics: "Aggressive caching · 100/100 Performance desktop",
+      metrics: "Aggressive caching · 100/100 Performance",
+      target: "_blank",
+    },
+    {
+      id: "PROJ://005",
+      name: "XRP",
+      desc: "Zero-config local reverse proxy. Auto-discovers running dev servers and routes them to clean .local HTTPS domains. Interactive TUI dashboard, cloudflared tunnels, cross-platform.",
+      href: "https://github.com/N3M1K/xrp",
+      color: "var(--cyan)",
+      badges: [
+        { label: "WIP", cls: "bw" },
+        { label: "Open Source", cls: "bc" },
+      ],
+      stack: ["Go", "Caddy", "mkcert", "Cloudflared", "TUI"],
+      lighthouse: [],
+      metrics: "Auto-discovery · HTTPS · Custom TLDs · Cross-platform",
       target: "_blank",
     },
   ];
 
-  const delays = ["", "d1", "d2", "d3"];
+  const delays = ["", "d1", "d2", "d3", "d4"];
 </script>
 
 <section id="projects">
@@ -210,10 +223,10 @@
     border: 1px solid;
     text-transform: uppercase;
   }
-  :global(.bl) { color: var(--green); border-color: rgba(139, 165, 99, 0.4); background: rgba(139, 165, 99, 0.08); }
-  :global(.bw) { color: var(--yellow); border-color: rgba(230, 174, 92, 0.4); background: rgba(230, 174, 92, 0.08); }
-  :global(.bs) { color: var(--purple); border-color: rgba(138, 113, 156, 0.4); background: rgba(138, 113, 156, 0.08); }
-  :global(.bc) { color: var(--blue); border-color: rgba(90, 134, 168, 0.4); background: rgba(90, 134, 168, 0.08); }
+  :global(.bl) { color: var(--green); border-color: rgba(122, 154, 107, 0.4); background: rgba(122, 154, 107, 0.08); }
+  :global(.bw) { color: var(--yellow); border-color: rgba(201, 162, 101, 0.4); background: rgba(201, 162, 101, 0.08); }
+  :global(.bs) { color: var(--purple); border-color: rgba(126, 109, 148, 0.4); background: rgba(126, 109, 148, 0.08); }
+  :global(.bc) { color: var(--blue); border-color: rgba(95, 137, 168, 0.4); background: rgba(95, 137, 168, 0.08); }
   .project-name {
     font-family: var(--display);
     font-size: 18px;

@@ -13,6 +13,7 @@
       delay: "",
       skills: [
         { name: "Bun", width: "85%", color: "var(--green)" },
+        { name: "Go", width: "55%", color: "var(--cyan)" },
         { name: "PHP", width: "80%", color: "var(--purple)" },
         { name: "ElysiaJS", width: "80%", color: "var(--blue)" },
         { name: "Node.js", width: "65%", color: "var(--green)" },
@@ -38,7 +39,7 @@
         { name: "Git", width: "82%", color: "var(--orange)" },
         { name: "NixOS", width: "35%", color: "var(--blue)" },
         { name: "Performance / LH", width: "75%", color: "var(--green)" },
-        { name: "Math (integrals, DEs)", width: "70%", color: "var(--purple)" },
+        { name: "REST / API Design", width: "70%", color: "var(--purple)" },
       ],
     },
   ];

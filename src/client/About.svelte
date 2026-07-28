@@ -12,27 +12,26 @@
     <div class="about-grid">
       <div class="about-text reveal" use:reveal>
         <p>
-          <span class="hi">Hey —</span> I'm a 4th-year high school student at
-          <span class="em">SPŠP-COP Zlín</span>, graduating May 2026.
-          Starting at <span class="em2">FI MUNI</span> (Programování a vývoj aplikací)
-          in September.
+          <span class="hi">Hey —</span> I graduated from
+          <span class="em">SPŠP-COP Zlín</span> in May 2026 and I'm
+          starting at <span class="em2">FI MUNI</span> (Programování a vývoj aplikací)
+          this September.
         </p>
         <p>
-          I've been building real, deployed projects since secondary school — not
-          toy apps, but
-          <span class="em">production systems with real clients</span>.
-          E-commerce platforms, corporate websites, real-time web apps. I care
-          about architecture, performance, and writing code that doesn't
-          embarrass you six months later.
+          I've been building and deploying production systems since high school —
+          <span class="em">e-commerce platforms, corporate websites, and
+          real-time web applications</span>.
+          I care about architecture, performance, and writing code that
+          holds up over time.
         </p>
         <p>
           Outside of code: I've been a
-          <span class="em3">camp leader at Smaragd</span> for 3 years — which
-          taught me more about managing chaos and people than any course.
-          Currently deep in <span class="em2">NixOS</span> after Arch, Fedora,
-          Mint and Kali. The declarative OS rabbit hole has me.
+          <span class="em3">group leader at Smaragd summer camp</span> for 3 years,
+          which taught me a lot about team coordination and
+          working under pressure. Linux enthusiast, currently running
+          <span class="em2">NixOS</span>.
         </p>
-        <p>Moving to Brno soon. Looking for interesting problems.</p>
+        <p>Moving to Brno soon. Open to interesting projects.</p>
       </div>
       <div class="about-stats reveal d2" use:reveal>
         <div class="stat-box" style="--acc:var(--green)">
@@ -48,8 +47,8 @@
           <div class="stat-label">Lighthouse Score</div>
         </div>
         <div class="stat-box" style="--acc:var(--purple)">
-          <div class="stat-num">∞</div>
-          <div class="stat-label">NixOS configs broken</div>
+          <div class="stat-num">3+</div>
+          <div class="stat-label">Years Dev Experience</div>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <footer>
   <span>LUKÁŠ NĚMEČEK · XXDEV · ZLÍN, CZ</span>
   <span style="color:var(--bg2)">//</span>
-  <span>No frameworks. Just HTML, CSS, JS. <span style="color:var(--green)">❤</span></span>
+  <span>Built with Svelte, Bun & Elysia <span style="color:var(--green)">❤</span></span>
 </footer>
 
 <style>

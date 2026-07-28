@@ -24,22 +24,22 @@
 
 <style>
   :global(:root) {
-    --bg: #12141a;
-    --bg1: #1c1f26;
-    --bg2: #2a2e38;
-    --bg3: #3e4552;
-    --fg4: #777777;
-    --fg: #a4a8ae;
-    --fg2: #cccccc;
-    --fg3: #d9dcdf;
-    --red: #c95a5a;
-    --orange: #e37349;
-    --yellow: #e6ae5c;
-    --green: #8ba563;
-    --cyan: #507b9e;
-    --blue: #5a86a8;
-    --purple: #8a719c;
-    --brown: #a3624c;
+    --bg: #0c0d11;
+    --bg1: #141519;
+    --bg2: #1e2028;
+    --bg3: #2e3240;
+    --fg4: #6b7084;
+    --fg: #9a9eb0;
+    --fg2: #c5c8d4;
+    --fg3: #dcdee6;
+    --red: #b05454;
+    --orange: #c47458;
+    --yellow: #c9a265;
+    --green: #7a9a6b;
+    --cyan: #5a7f96;
+    --blue: #5f89a8;
+    --purple: #7e6d94;
+    --brown: #8f5e4a;
     --display: "Major Mono Display", monospace;
     --mono: "Share Tech Mono", monospace;
     --code: "JetBrains Mono", monospace;
@@ -89,8 +89,8 @@
     position: fixed;
     inset: 0;
     background-image:
-      linear-gradient(rgba(90, 134, 168, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(90, 134, 168, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(95, 137, 168, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(95, 137, 168, 0.03) 1px, transparent 1px);
     background-size: 48px 48px;
     pointer-events: none;
     z-index: 0;
@@ -151,11 +151,11 @@
   }
   :global(.btn-g) {
     color: var(--green);
-    border-color: rgba(139, 165, 99, 0.45);
+    border-color: rgba(122, 154, 107, 0.45);
   }
   :global(.btn-g:hover) {
-    background: rgba(139, 165, 99, 0.1);
-    box-shadow: 0 0 20px rgba(139, 165, 99, 0.2);
+    background: rgba(122, 154, 107, 0.1);
+    box-shadow: 0 0 20px rgba(122, 154, 107, 0.2);
   }
   :global(.btn-ghost) {
     color: var(--fg4);

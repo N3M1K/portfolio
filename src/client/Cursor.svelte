@@ -35,7 +35,7 @@
         cursor.style.background = "var(--yellow)";
         cring.style.width = "48px";
         cring.style.height = "48px";
-        cring.style.borderColor = "rgba(230,174,92,.5)";
+        cring.style.borderColor = "rgba(201,162,101,.5)";
       }
     }
     function onOut(e: MouseEvent) {
@@ -45,7 +45,7 @@
         cursor.style.background = "var(--green)";
         cring.style.width = "32px";
         cring.style.height = "32px";
-        cring.style.borderColor = "rgba(139,165,99,.4)";
+        cring.style.borderColor = "rgba(122,154,107,.4)";
       }
     }
 
@@ -94,7 +94,7 @@
     position: fixed;
     width: 32px;
     height: 32px;
-    border: 1px solid rgba(139, 165, 99, 0.4);
+    border: 1px solid rgba(122, 154, 107, 0.4);
     border-radius: 50%;
     pointer-events: none;
     z-index: 9998;

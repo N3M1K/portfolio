@@ -4,16 +4,16 @@
 
 <section id="hero">
   <div class="reveal" use:reveal>
-    <div class="hero-tag">Available for freelance</div>
+    <div class="hero-tag">Open to opportunities</div>
     <h1 class="hero-name">
       <span class="glitch" data-text="Lukáš">Lukáš</span><br />
       <span class="glitch" data-text="Němeček">Němeček</span>
     </h1>
     <div class="hero-handle"><span class="slash">//</span>xxdev</div>
     <p class="hero-desc">
-      Developer from <span class="ac">Zlín, CZ</span>. Building real things —
-      production e-commerce, real-time platforms, corporate systems. Incoming
-      <span class="ac">FI MUNI</span> student. Camp leader. NixOS explorer.
+      Fullstack developer from <span class="ac">Zlín, CZ</span>.
+      Production e-commerce, corporate sites, real-time platforms.
+      Starting at <span class="ac">FI MUNI</span> this September.
     </p>
     <div class="hero-ctas">
       <a href="#projects" class="btn btn-g">→ view projects</a>
@@ -43,15 +43,15 @@
         "location": <span style="color:var(--yellow)">"Zlín → Brno"</span>,
       </div>
       <div style="color:var(--blue);padding-left:36px">
-        "next": <span style="color:var(--yellow)">"FI MUNI 2026"</span>,
+        "focus": <span style="color:var(--yellow)">"fullstack web dev"</span>,
       </div>
       <div style="color:var(--blue);padding-left:36px">
         "stack": <span style="color:var(--yellow)"
-          >["Bun","Elysia","TS","PHP"]</span
+          >["Bun","Elysia","TS","Go","PHP"]</span
         >,
       </div>
       <div style="color:var(--blue);padding-left:36px">
-        "os": <span style="color:var(--yellow)">"NixOS"</span>,
+        "next": <span style="color:var(--yellow)">"FI MUNI 2026"</span>,
       </div>
       <div class="to">{"}"}</div>
       <div style="display:flex;gap:10px;margin-top:8px">
@@ -213,7 +213,7 @@
     bottom: 0;
     width: 3px;
     background: var(--green);
-    box-shadow: 0 0 12px rgba(139, 165, 99, 0.6);
+    box-shadow: 0 0 12px rgba(122, 154, 107, 0.6);
   }
   .term-bar {
     display: flex;

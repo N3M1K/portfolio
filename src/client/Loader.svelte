@@ -315,7 +315,7 @@
     bottom: 0;
     width: 3px;
     background: var(--green);
-    box-shadow: 0 0 10px rgba(139, 165, 99, 0.5);
+    box-shadow: 0 0 10px rgba(122, 154, 107, 0.5);
   }
   .skip-hint {
     position: fixed;
@@ -372,7 +372,7 @@
     background: var(--green);
     width: 0%;
     transition: width 0.4s linear;
-    box-shadow: 0 0 8px rgba(139, 165, 99, 0.4);
+    box-shadow: 0 0 8px rgba(122, 154, 107, 0.4);
   }
 
   @keyframes blink {

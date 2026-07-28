@@ -43,9 +43,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(18, 20, 26, 0.88);
+    background: rgba(12, 13, 17, 0.90);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(62, 69, 82, 0.5);
+    border-bottom: 1px solid rgba(46, 50, 64, 0.5);
   }
   .nav-logo {
     font-family: var(--display);

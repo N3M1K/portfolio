@@ -5,31 +5,31 @@
     {
       date: "SEP 2026",
       title: "FI MUNI — Programování a vývoj aplikací",
-      desc: 'Incoming at <span class="em">Faculty of Informatics, Masaryk University</span>. Moving to Brno.',
+      desc: 'Starting at <span class="em">Faculty of Informatics, Masaryk University</span>. Moving to Brno.',
       delay: "",
     },
     {
       date: "MAY 2026",
       title: "Maturita — SPŠP-COP Zlín",
-      desc: "Graduating from IT programme. Matematický seminář: integrals, derivatives, complex numbers, conics.",
+      desc: "Graduated from IT programme with a focus on mathematics and software development.",
       delay: "d1",
     },
     {
       date: "2025 — 2026",
       title: "Yokohama TWS — Corporate Website",
-      desc: 'Freelance. Building the corporate site for a major industrial tyre manufacturer with <span class="em">performance-first caching architecture</span>.',
+      desc: 'Volunteer project. Building the corporate site for a major industrial tyre manufacturer with <span class="em">performance-first caching architecture</span>.',
       delay: "d2",
     },
     {
       date: "2024",
       title: "Pneubazar Zlín — E-commerce Platform",
-      desc: 'Ročníková práce turned real client. <span class="em">Full-stack e-commerce</span>, PHP/MySQL, parametric filtering, admin. Lighthouse 90/100/91. Live in production.',
+      desc: 'School thesis project turned into a real client engagement. <span class="em">Full-stack e-commerce</span> with PHP/MySQL, parametric filtering, and a custom admin panel. Delivered and deployed to production.',
       delay: "d3",
     },
     {
       date: "2023 — NOW",
-      title: "Smaragd Summer Camp — Vedoucí",
-      desc: "10+ years as a camper, now leading groups. The best school I've had for people, chaos, and responsibility.",
+      title: "Smaragd Summer Camp — Group Leader",
+      desc: "10+ years as a camper, now leading groups. Building leadership and organizational skills through hands-on team management.",
       delay: "d4",
     },
   ];

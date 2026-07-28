@@ -13,23 +13,15 @@
       <div class="contact-text reveal" use:reveal>
         <h2>Let's build<br /><span>something real.</span></h2>
         <p>
-          Open to freelance work, interesting projects, and conversations about
-          architecture, Linux, or why polling is inferior to WebSockets.
+          Open to freelance work, interesting projects, and technical
+          collaborations.
         </p>
         <div class="contact-links">
           <a class="contact-link" href="https://xxdev.cz" target="_blank">
             <span class="ll">Web</span><span class="lv">xxdev.cz</span
             ><span class="la">→</span>
           </a>
-          <a
-            class="contact-link"
-            href="https://pneubazarzlin.cz"
-            target="_blank"
-          >
-            <span class="ll">Live</span><span class="lv"
-              >pneubazarzlin.cz</span
-            ><span class="la">→</span>
-          </a>
+
           <a class="contact-link" href="https://smaragd.us" target="_blank">
             <span class="ll">Camp</span><span class="lv">smaragd.us</span
             ><span class="la">→</span>
@@ -49,8 +41,9 @@
         </div>
         <h3>Open to projects</h3>
         <p>
-          Graduating May 2026, FI MUNI in September. Available for interesting
-          freelance work now — and open to collaborations during university.
+          SPŠP-COP Zlín graduate, starting at FI MUNI this September.
+          Available for freelance work and open to collaborations
+          during university.
         </p>
         <a href="mailto:lukas.nemecek@xxdev.cz" class="btn btn-g">→ send a message</a>
       </div>
