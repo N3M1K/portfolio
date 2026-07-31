@@ -101,9 +101,24 @@
       metrics: "Auto-discovery · HTTPS · Custom TLDs · Cross-platform",
       target: "_blank",
     },
+    {
+      id: "PROJ://006",
+      name: "XPLOY",
+      desc: "Custom deployment automation tool used to manage and deploy my personal sites and self-hosted infrastructure.",
+      href: "https://git.xxdev.cz/n3m1k/xploy",
+      color: "var(--purple)",
+      badges: [
+        { label: "Live", cls: "bl" },
+        { label: "Infrastructure", cls: "bs" },
+      ],
+      stack: ["Linux", "Self-hosted", "DevOps"],
+      lighthouse: [],
+      metrics: "Automated Deployments · Self-hosted Git",
+      target: "_blank",
+    },
   ];
 
-  const delays = ["", "d1", "d2", "d3", "d4"];
+  const delays = ["", "d1", "d2", "d3", "d4", "d5"];
 </script>
 
 <section id="projects">

@@ -31,6 +31,9 @@
           working under pressure. Linux enthusiast, currently running
           <span class="em2">NixOS</span>.
         </p>
+        <p>
+          I'm also passionate about infrastructure and DevOps—running a <span class="em">self-hosted Git (Forgejo)</span> instance and managing deployments for my own sites using my custom <span class="em2">xploy</span> project.
+        </p>
         <p>Moving to Brno soon. Open to interesting projects.</p>
       </div>
       <div class="about-stats reveal d2" use:reveal>

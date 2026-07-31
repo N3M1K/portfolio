@@ -180,6 +180,7 @@
   :global(.d2) { transition-delay: 0.2s; }
   :global(.d3) { transition-delay: 0.3s; }
   :global(.d4) { transition-delay: 0.4s; }
+  :global(.d5) { transition-delay: 0.5s; }
 
   /* Scrollbar */
   :global(::-webkit-scrollbar) { width: 4px; }

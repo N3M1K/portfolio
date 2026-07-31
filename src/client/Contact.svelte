@@ -22,6 +22,11 @@
             ><span class="la">→</span>
           </a>
 
+          <a class="contact-link" href="https://git.xxdev.cz" target="_blank">
+            <span class="ll">Git</span><span class="lv">git.xxdev.cz</span
+            ><span class="la">→</span>
+          </a>
+
           <a class="contact-link" href="https://smaragd.us" target="_blank">
             <span class="ll">Camp</span><span class="lv">smaragd.us</span
             ><span class="la">→</span>
