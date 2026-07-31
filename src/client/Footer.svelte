@@ -1,5 +1,5 @@
 <footer>
-  <span>LUKÁŠ NĚMEČEK · XXDEV · ZLÍN, CZ</span>
+  <span>LUKÁŠ NĚMEČEK · XXDEV · ZLÍN, CZ · IČO: 29706157</span>
   <span style="color:var(--bg2)">//</span>
   <span>Built with Svelte, Bun & Elysia <span style="color:var(--green)">❤</span></span>
 </footer>
