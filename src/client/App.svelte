@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import Loader from "./Loader.svelte";
   import Cursor from "./Cursor.svelte";
   import Nav from "./Nav.svelte";
@@ -9,18 +10,53 @@
   import Timeline from "./Timeline.svelte";
   import Contact from "./Contact.svelte";
   import Footer from "./Footer.svelte";
+
+  let blurFilter;
+
+  onMount(() => {
+    let lastScrollY = window.scrollY;
+    let vel = 0;
+
+    function tick() {
+      const currentScrollY = window.scrollY;
+      const d = currentScrollY - lastScrollY;
+      
+      vel = vel * 0.8 + d * 0.2; // Smooth the velocity
+      
+      let blurY = Math.abs(vel) * 0.12;
+      if (blurY < 0.2) blurY = 0; // Optimization: disable filter when slow
+      if (blurY > 25) blurY = 25; // Cap the maximum blur
+
+      if (blurFilter) {
+        blurFilter.setAttribute("stdDeviation", `0,${blurY}`);
+      }
+
+      lastScrollY = currentScrollY;
+      requestAnimationFrame(tick);
+    }
+    tick();
+  });
 </script>
+
+<svg style="width:0;height:0;position:fixed;pointer-events:none;z-index:-1;">
+  <filter id="scroll-blur" x="-20%" y="-20%" width="140%" height="140%">
+    <feGaussianBlur bind:this={blurFilter} in="SourceGraphic" stdDeviation="0,0" />
+  </filter>
+</svg>
 
 <Loader />
 <Cursor />
 <Nav />
-<Hero />
-<About />
-<Projects />
-<Skills />
-<Timeline />
-<Contact />
-<Footer />
+
+<main style="filter: url(#scroll-blur); will-change: filter;">
+  <Hero />
+  <About />
+  <Projects />
+  <Skills />
+  <Timeline />
+  <Contact />
+  <Footer />
+</main>
 
 <style>
   :global(:root) {
