@@ -2,6 +2,7 @@ import { Elysia } from "elysia";
 import path from "path";
 
 const DIST = path.resolve("dist");
+const PORT = process.env.PORT || 3000;
 
 const app = new Elysia()
   .get("/", () => new Response(Bun.file(path.join(DIST, "index.html"))))
@@ -9,7 +10,7 @@ const app = new Elysia()
     const filePath = path.join(DIST, ctx.path);
     return new Response(Bun.file(filePath));
   })
-  .listen(3000);
+  .listen(PORT);
 
 console.log(
   `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
