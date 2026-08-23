@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="100%" height="100%">
+  <style>
+    .slash { 
+      fill: #7c9075;
+      font-family: 'Courier New', Courier, monospace; 
+      font-size: 42px; 
+      font-weight: bold; 
+    }
+    .brand { 
+      fill: #e2e2e2; 
+      font-family: 'Courier New', Courier, monospace; 
+      font-size: 42px; 
+      font-weight: normal; 
+      letter-spacing: 6px; 
+    }
+  </style>
+  <text x="10" y="55" class="slash">//</text>
+  <text x="75" y="55" class="brand">XXDEV</text>
+</svg>

@@ -23,7 +23,9 @@
 </script>
 
 <nav>
-  <a href="#hero" class="nav-logo"><span>//</span>xxdev</a>
+  <a href="#hero" class="nav-logo">
+    <img src="/logo" alt="XXDEV Logo" style="width: 100%; height: auto; display: block;" />
+  </a>
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -48,14 +50,10 @@
     border-bottom: 1px solid rgba(46, 50, 64, 0.5);
   }
   .nav-logo {
-    font-family: var(--display);
-    font-size: 18px;
-    color: var(--fg3);
-    letter-spacing: 4px;
+    display: block;
+    width: 120px;
+    height: auto;
     text-decoration: none;
-  }
-  .nav-logo span {
-    color: var(--green);
   }
   .nav-links {
     display: flex;

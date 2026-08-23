@@ -6,6 +6,11 @@ const PORT = process.env.PORT || 3000;
 
 const app = new Elysia()
   .get("/", () => new Response(Bun.file(path.join(DIST, "index.html"))))
+  .get("/logo", () => {
+    return new Response(Bun.file(path.join(DIST, "logo.svg")), {
+      headers: { "Content-Type": "image/svg+xml" },
+    });
+  })
   .get("/assets/*", (ctx) => {
     const filePath = path.join(DIST, ctx.path);
     return new Response(Bun.file(filePath));
