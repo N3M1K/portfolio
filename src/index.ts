@@ -11,6 +11,11 @@ const app = new Elysia()
       headers: { "Content-Type": "image/svg+xml" },
     });
   })
+  .get("/icon", () => {
+    return new Response(Bun.file(path.join(DIST, "icon.svg")), {
+      headers: { "Content-Type": "image/svg+xml" },
+    });
+  })
   .get("/assets/*", (ctx) => {
     const filePath = path.join(DIST, ctx.path);
     return new Response(Bun.file(filePath));

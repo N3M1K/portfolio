@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="100%" height="100%">
+  <style>
+    .slash { 
+      fill: #7c9075; /* Tlumená zelená evokující Cyberpresso/terminál */
+      font-family: 'Courier New', Courier, monospace; 
+      font-size: 42px; 
+      font-weight: bold; 
+    }
+  </style>
+  <text x="10" y="55" class="slash">//</text>
+</svg>
