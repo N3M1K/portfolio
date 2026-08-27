@@ -23,13 +23,13 @@
 </script>
 
 <nav>
-  <a href="#hero" class="nav-logo">
+  <a href="#hero" class="nav-logo" title="xxdev - back to top">
     <img src="/logo" alt="XXDEV Logo" style="width: 100%; height: auto; display: block;" />
   </a>
   <div class="nav-links">
+    <a href="#projects">Work</a>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
+    <a href="#skills">Arsenal</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -41,43 +41,71 @@
     left: 0;
     right: 0;
     z-index: 500;
-    padding: 16px 40px;
+    padding: 14px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(12, 13, 17, 0.90);
+    background: rgba(12, 13, 17, 0.92);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(46, 50, 64, 0.5);
+    border-bottom: 1px solid rgba(46, 50, 64, 0.6);
   }
   .nav-logo {
     display: block;
-    width: 120px;
+    width: 115px;
     height: auto;
     text-decoration: none;
+    transition: transform 0.2s;
+  }
+  .nav-logo:hover {
+    transform: scale(1.02);
   }
   .nav-links {
     display: flex;
-    gap: 2px;
+    gap: 4px;
   }
   .nav-links a {
-    color: var(--fg4);
+    color: var(--fg2);
     text-decoration: none;
-    font-size: 10px;
-    letter-spacing: 2.5px;
+    font-size: 11px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    padding: 6px 14px;
+    padding: 6px 12px;
     border: 1px solid transparent;
     transition: all 0.15s;
+    font-family: var(--mono);
+    font-weight: 500;
   }
   .nav-links a:hover {
-    color: var(--fg2);
+    color: #fff;
     border-color: var(--bg3);
     background: var(--bg1);
   }
 
   @media (max-width: 900px) {
     nav {
-      padding: 14px 20px;
+      padding: 12px 20px;
+    }
+    .nav-links a {
+      padding: 6px 8px;
+      font-size: 10.5px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav {
+      padding: 10px 14px;
+    }
+    .nav-logo {
+      width: 95px;
+    }
+    .nav-links {
+      gap: 2px;
+    }
+    .nav-links a {
+      padding: 6px 6px;
+      font-size: 10px;
+      letter-spacing: 1px;
     }
   }
 </style>

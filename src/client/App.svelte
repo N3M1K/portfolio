@@ -39,8 +39,8 @@
 </script>
 
 <svg style="width:0;height:0;position:fixed;pointer-events:none;z-index:-1;">
-  <filter id="scroll-blur" x="-20%" y="-20%" width="140%" height="140%">
-    <feGaussianBlur bind:this={blurFilter} in="SourceGraphic" stdDeviation="0,0" />
+  <filter id="scroll-blur" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+    <feGaussianBlur bind:this={blurFilter} in="SourceGraphic" stdDeviation="0,0" color-interpolation-filters="sRGB" />
   </filter>
 </svg>
 
@@ -50,8 +50,8 @@
 
 <main style="filter: url(#scroll-blur); will-change: filter;">
   <Hero />
-  <About />
   <Projects />
+  <About />
   <Skills />
   <Timeline />
   <Contact />
@@ -64,18 +64,18 @@
     --bg1: #141519;
     --bg2: #1e2028;
     --bg3: #2e3240;
-    --fg4: #6b7084;
-    --fg: #9a9eb0;
-    --fg2: #c5c8d4;
-    --fg3: #dcdee6;
-    --red: #b05454;
-    --orange: #c47458;
-    --yellow: #c9a265;
-    --green: #7a9a6b;
-    --cyan: #5a7f96;
-    --blue: #5f89a8;
-    --purple: #7e6d94;
-    --brown: #8f5e4a;
+    --fg4: #9ca1b8;
+    --fg: #bec3d7;
+    --fg2: #e2e5f4;
+    --fg3: #f4f6fc;
+    --red: #c25e5e;
+    --orange: #cf7e63;
+    --yellow: #d4af72;
+    --green: #7ca36d;
+    --cyan: #648da8;
+    --blue: #6b9ec2;
+    --purple: #8e7ca6;
+    --brown: #9e6953;
     --display: "Major Mono Display", monospace;
     --mono: "Share Tech Mono", monospace;
     --code: "JetBrains Mono", monospace;
@@ -150,22 +150,25 @@
     border-bottom: 1px solid var(--bg2);
     display: flex;
     align-items: baseline;
-    gap: 16px;
+    gap: 14px;
+    flex-wrap: wrap;
   }
   :global(.section-num) {
     font-family: var(--display);
     font-size: 11px;
     color: var(--green);
     letter-spacing: 2px;
+    flex-shrink: 0;
   }
   :global(.section-title) {
     font-family: var(--display);
-    font-size: clamp(22px, 3vw, 32px);
+    font-size: clamp(20px, 3vw, 32px);
     color: var(--fg3);
-    letter-spacing: 3px;
+    letter-spacing: 2px;
   }
   :global(.section-line) {
     flex: 1;
+    min-width: 20px;
     height: 1px;
     background: var(--bg2);
   }
@@ -187,11 +190,11 @@
   }
   :global(.btn-g) {
     color: var(--green);
-    border-color: rgba(122, 154, 107, 0.45);
+    border-color: rgba(122, 163, 109, 0.45);
   }
   :global(.btn-g:hover) {
-    background: rgba(122, 154, 107, 0.1);
-    box-shadow: 0 0 20px rgba(122, 154, 107, 0.2);
+    background: rgba(122, 163, 109, 0.1);
+    box-shadow: 0 0 20px rgba(122, 163, 109, 0.2);
   }
   :global(.btn-ghost) {
     color: var(--fg4);
@@ -223,7 +226,30 @@
   :global(::-webkit-scrollbar-track) { background: var(--bg); }
   :global(::-webkit-scrollbar-thumb) { background: var(--bg3); }
 
+  /* Focus states for accessibility */
+  :global(:focus-visible) {
+    outline: 2px solid var(--green) !important;
+    outline-offset: 3px !important;
+  }
+
   @media (max-width: 900px) {
     :global(.container) { padding: 0 20px; }
+  }
+
+  @media (max-width: 600px) {
+    :global(.section-header) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+    }
+    :global(.section-line) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    :global(.container) { padding: 0 14px; }
   }
 </style>
