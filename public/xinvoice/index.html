@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>xInvoice — Faktury pro vývojáře</title>
+  <meta name="description" content="Fakturační nástroj pro OSVČ a malé firmy v Česku. Web editor s live náhledem, Go CLI, QR platby, ARES vyhledávání. Funguje bez registrace.">
+  <base href="/xinvoice/">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2300ff66'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='700' font-size='16' fill='black'>xi</text></svg>">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="site-logo">
+        <span class="site-logo-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
+            <path d="M14 2v6h6"/>
+          </svg>
+        </span>
+        XINVOICE
+        <span class="site-logo-tag">CLI &amp; WEB</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Otevřít menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#funkce">Funkce</a>
+        <a href="#cli">CLI</a>
+        <a href="#rezimy">Režimy</a>
+        <a href="https://git.xxdev.cz/n3m1k/xinvoice">Zdrojový kód</a>
+        <a href="https://xinvoice.xxdev.cz" class="nav-cta">Vyzkoušet</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Faktury pro vývojáře. Bez zbytečností.</h1>
+        <p>
+          Web editor s&nbsp;live náhledem faktury, QR platební kódy, vyhledání firmy přes ARES.
+          Funguje okamžitě — bez registrace, bez čekání. Nebo z&nbsp;terminálu přes <span class="mono">xi</span>.
+        </p>
+        <a href="https://xinvoice.xxdev.cz" class="hero-cta">Vyzkoušet bez registrace</a>
+        <span class="hero-note">Data zůstávají v prohlížeči. Žádný účet není potřeba.</span>
+      </div>
+
+      <!-- Invoice Editor Mockup -->
+      <div class="invoice-mockup">
+        <div class="mockup-toolbar">
+          <span class="mockup-dot"></span>
+          <span class="mockup-dot"></span>
+          <span class="mockup-dot"></span>
+          <span class="mockup-title">xinvoice.xxdev.cz — Nová faktura</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-editor">
+            <div class="mockup-label">Editor</div>
+            <div class="mockup-field">
+              <div class="mockup-field-label">Odběratel (IČO)</div>
+              <div class="mockup-field-value active">27082440</div>
+            </div>
+            <div class="mockup-field">
+              <div class="mockup-field-label">Název</div>
+              <div class="mockup-field-value">Firma s.r.o.</div>
+            </div>
+            <div class="mockup-field">
+              <div class="mockup-field-label">Položka</div>
+              <div class="mockup-field-value">Vývoj webové aplikace</div>
+            </div>
+            <div class="mockup-field">
+              <div class="mockup-field-label">Částka</div>
+              <div class="mockup-field-value">45 000 Kč</div>
+            </div>
+          </div>
+          <div class="mockup-preview">
+            <div class="mockup-label">Náhled A4</div>
+            <div class="mockup-invoice">
+              <div class="mockup-invoice-accent"></div>
+              <div class="mockup-invoice-header">
+                <span class="mockup-invoice-number">FV-2025-0042</span>
+                <span class="mockup-invoice-date">31. 08. 2025</span>
+              </div>
+              <div class="mockup-invoice-parties">
+                <div>
+                  <strong>Dodavatel</strong>
+                  Jan Novák<br>
+                  <span style="font-family: var(--font-mono); font-variant-numeric: tabular-nums;">IČO: 12345678</span>
+                </div>
+                <div>
+                  <strong>Odběratel</strong>
+                  Firma s.r.o.<br>
+                  <span style="font-family: var(--font-mono); font-variant-numeric: tabular-nums;">IČO: 27082440</span>
+                </div>
+              </div>
+              <table class="mockup-invoice-table">
+                <thead>
+                  <tr>
+                    <th>Položka</th>
+                    <th class="num">Množství</th>
+                    <th class="num">Cena</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Vývoj webové aplikace</td>
+                    <td class="num">1</td>
+                    <td class="num">45&nbsp;000&nbsp;Kč</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="mockup-invoice-total">Celkem: 45&nbsp;000&nbsp;Kč</div>
+              <div class="mockup-invoice-qr">
+                <div class="qr-placeholder">
+                  <span class="qr-cell"></span><span class="qr-cell"></span><span class="qr-cell"></span><span class="qr-cell empty"></span><span class="qr-cell"></span>
+                  <span class="qr-cell"></span><span class="qr-cell empty"></span><span class="qr-cell"></span><span class="qr-cell empty"></span><span class="qr-cell"></span>
+                  <span class="qr-cell"></span><span class="qr-cell"></span><span class="qr-cell"></span><span class="qr-cell"></span><span class="qr-cell empty"></span>
+                  <span class="qr-cell empty"></span><span class="qr-cell empty"></span><span class="qr-cell"></span><span class="qr-cell empty"></span><span class="qr-cell"></span>
+                  <span class="qr-cell"></span><span class="qr-cell"></span><span class="qr-cell empty"></span><span class="qr-cell"></span><span class="qr-cell"></span>
+                </div>
+                <span class="qr-text">QR platba (SPD formát)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES ========== -->
+  <section class="features" id="funkce">
+    <div class="container">
+      <h2>Co xInvoice umí</h2>
+
+      <div class="features-grid">
+        <div class="feature-cell">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 12h18"/>
+              <path d="M12 3v18"/>
+            </svg>
+            Web editor s live náhledem
+          </h3>
+          <p>
+            Formulář na levé straně, A4 náhled faktury na pravé — každá změna se projeví okamžitě.
+            Položky s&nbsp;DPH, automatické součty, formátování pro tisk i&nbsp;PDF.
+          </p>
+        </div>
+
+        <div class="feature-cell">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+              <path d="M11 8v6"/>
+              <path d="M8 11h6"/>
+            </svg>
+            ARES vyhledávání + QR platba
+          </h3>
+          <p>
+            Zadejte IČO odběratele a&nbsp;xInvoice doplní název, adresu a&nbsp;DIČ
+            z&nbsp;registru ARES. Na každou fakturu se automaticky vygeneruje
+            QR kód pro platbu ve&nbsp;formátu SPD — stačí naskenovat bankovní appkou.
+          </p>
+        </div>
+
+        <div class="feature-cell">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+              <path d="M8 11h8"/>
+            </svg>
+            Guest režim — bez registrace
+          </h3>
+          <p>
+            Appka funguje ihned po otevření. Žádný povinný účet, žádné ověřování
+            e-mailu. Data se ukládají lokálně v&nbsp;prohlížeči (localStorage) a&nbsp;nikam
+            se neodesílají.
+          </p>
+        </div>
+
+        <div class="feature-cell">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="4 17 10 11 4 5"/>
+              <line x1="12" y1="19" x2="20" y2="19"/>
+            </svg>
+            CLI <span class="mono">xi</span>
+          </h3>
+          <p>
+            Vytvářejte faktury přímo z&nbsp;terminálu. Interaktivní režim nebo
+            automatizace přes flagy. Generuje PDF lokálně, integruje se s&nbsp;cloud
+            účtem pro sdílení dat s&nbsp;web editorem.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLI ========== -->
+  <section class="cli-section" id="cli">
+    <div class="container">
+      <h2>Faktura z terminálu</h2>
+      <p>
+        CLI nástroj <span class="mono">xi</span> vytváří faktury bez otevření prohlížeče.
+        Zadejte IČO, položky a&nbsp;výstupní soubor — PDF se vygeneruje lokálně.
+      </p>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-bar-left">
+            <div class="terminal-bar-dots">
+              <span class="terminal-bar-dot"></span>
+              <span class="terminal-bar-dot"></span>
+              <span class="terminal-bar-dot"></span>
+            </div>
+            <span class="terminal-bar-label">~</span>
+          </div>
+        </div>
+        <div class="terminal-body">
+          <code><span class="terminal-prompt">$</span> <span class="terminal-command">xi create</span> <span class="terminal-flag">--ares-client</span> <span class="terminal-string">27082440</span> \
+  <span class="terminal-flag">--item</span> <span class="terminal-string">"Vývoj webové aplikace, 45000"</span> \
+  <span class="terminal-flag">--due</span> <span class="terminal-string">14</span> \
+  <span class="terminal-flag">--output-pdf</span> <span class="terminal-string">faktura-2025-0042.pdf</span>
+
+<span class="terminal-output">  Odběratel:  Firma s.r.o. (IČO 27082440)</span>
+<span class="terminal-output">  Položky:    1× Vývoj webové aplikace   45 000 Kč</span>
+<span class="terminal-output">  Splatnost:  14. 09. 2025</span>
+<span class="terminal-output">  QR platba:  ✓ SPD kód vygenerován</span>
+<span class="terminal-output">  PDF:        faktura-2025-0042.pdf (42 kB)</span>
+
+<span class="terminal-prompt">$</span> <span class="terminal-cursor"></span></code>
+        </div>
+      </div>
+
+      <div class="install-block">
+        <code id="install-cmd">curl -fsSL https://xinvoice.xxdev.cz/install.sh | bash</code>
+        <button class="copy-btn" id="copy-install" type="button" aria-label="Kopírovat instalační příkaz">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+          Kopírovat
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPARISON ========== -->
+  <section class="comparison" id="rezimy">
+    <div class="container">
+      <h2>Guest vs. Cloud</h2>
+      <p>
+        xInvoice funguje ve dvou režimech. Guest je výchozí — stačí otevřít a&nbsp;fakturovat.
+        Cloud přidává synchronizaci a&nbsp;přístup z&nbsp;CLI.
+      </p>
+
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Guest</th>
+              <th>Cloud</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Registrace</td>
+              <td><span class="check">Není potřeba</span></td>
+              <td>E-mail + heslo</td>
+            </tr>
+            <tr>
+              <td>Úložiště dat</td>
+              <td>Lokálně v prohlížeči</td>
+              <td>Server + lokální cache</td>
+            </tr>
+            <tr>
+              <td>Synchronizace</td>
+              <td><span class="dash">—</span></td>
+              <td><span class="check">Napříč zařízeními</span></td>
+            </tr>
+            <tr>
+              <td>CLI přístup</td>
+              <td><span class="dash">—</span></td>
+              <td><span class="check">Plná integrace</span></td>
+            </tr>
+            <tr>
+              <td>ARES + QR platba</td>
+              <td><span class="check">Ano</span></td>
+              <td><span class="check">Ano</span></td>
+            </tr>
+            <tr>
+              <td>PDF export</td>
+              <td><span class="check">Ano</span></td>
+              <td><span class="check">Ano</span></td>
+            </tr>
+            <tr>
+              <td>Cena</td>
+              <td><span class="check">Zdarma</span></td>
+              <td><span class="check">Zdarma</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <a href="/" class="footer-brand">xInvoice</a>
+          <span class="footer-author">
+            Lukáš Němeček · <a href="https://xxdev.cz">xxdev.cz</a>
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="https://xinvoice.xxdev.cz">Aplikace</a>
+          <a href="https://git.xxdev.cz/n3m1k/xinvoice">Zdrojový kód</a>
+          <a href="https://xinvoice.xxdev.cz/terms">Podmínky</a>
+          <a href="https://xinvoice.xxdev.cz/privacy">GDPR</a>
+          <a href="mailto:lukas.nemecek@xxdev.cz">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
