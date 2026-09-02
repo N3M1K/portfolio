@@ -7,7 +7,7 @@
   <meta name="description" content="Fakturační nástroj pro OSVČ a malé firmy v Česku. Web editor s live náhledem, Go CLI, QR platby, ARES vyhledávání. Funguje bez registrace.">
   <base href="/xinvoice/">
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%2300ff66'/><text x='16' y='22' text-anchor='middle' font-family='system-ui' font-weight='700' font-size='16' fill='black'>xi</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="icon-bg.svg">
 </head>
 <body>
 
@@ -16,9 +16,9 @@
     <div class="container">
       <a href="/" class="site-logo">
         <span class="site-logo-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/>
-            <path d="M14 2v6h6"/>
+          <svg viewBox="0 0 297.64 297.64" fill="currentColor">
+            <path d="M54.44,52.89l1.06,90.35c0.04,3.18,2.63,5.74,5.8,5.74h88.36L243.2,55.7l-94.38-0.28l-45.51,45.51L54.44,52.89z"/>
+            <path d="M54.44,244.75l95.22-95.77h87.73c3.21,0,5.8,2.6,5.8,5.8v89.96l-48.31-46.07l-44.37,44.37c-1.09,1.09-2.57,1.7-4.1,1.7 H54.44z"/>
           </svg>
         </span>
         XINVOICE
@@ -89,7 +89,10 @@
             <div class="mockup-invoice">
               <div class="mockup-invoice-accent"></div>
               <div class="mockup-invoice-header">
-                <span class="mockup-invoice-number">FV-2025-0042</span>
+                <div style="display: flex; align-items: center; gap: 7px;">
+                  <img src="icon.svg" alt="xInvoice" width="14" height="14" style="display: block; opacity: 0.85;" />
+                  <span class="mockup-invoice-number">FV-2025-0042</span>
+                </div>
                 <span class="mockup-invoice-date">31. 08. 2025</span>
               </div>
               <div class="mockup-invoice-parties">
@@ -323,7 +326,15 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-left">
-          <a href="/" class="footer-brand">xInvoice</a>
+          <a href="/xinvoice/" class="footer-brand">
+            <span class="footer-logo-badge">
+              <svg viewBox="0 0 297.64 297.64" fill="currentColor">
+                <path d="M54.44,52.89l1.06,90.35c0.04,3.18,2.63,5.74,5.8,5.74h88.36L243.2,55.7l-94.38-0.28l-45.51,45.51L54.44,52.89z"/>
+                <path d="M54.44,244.75l95.22-95.77h87.73c3.21,0,5.8,2.6,5.8,5.8v89.96l-48.31-46.07l-44.37,44.37c-1.09,1.09-2.57,1.7-4.1,1.7 H54.44z"/>
+              </svg>
+            </span>
+            xInvoice
+          </a>
           <span class="footer-author">
             Lukáš Němeček · <a href="https://xxdev.cz">xxdev.cz</a>
           </span>

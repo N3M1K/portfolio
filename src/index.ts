@@ -57,7 +57,15 @@ const app = new Elysia()
       });
     }
 
-    const file = await getFile(path.join("xinvoice", subPath));
+    let file = await getFile(path.join("xinvoice", subPath));
+    if (!file && !path.extname(subPath)) {
+      const svgFile = await getFile(path.join("xinvoice", subPath + ".svg"));
+      if (svgFile) {
+        return new Response(svgFile, {
+          headers: { "Content-Type": "image/svg+xml" },
+        });
+      }
+    }
     if (file) {
       return new Response(file);
     }
